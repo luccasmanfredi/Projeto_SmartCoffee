@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SmartCoffee: café de qualidade, tecnologia e um ambiente acolhedor.">
+    <title>SmartCoffee - Café que conecta pessoas</title>
+
+    <!-- Fonte Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Definição reutilizável do SVG do Logo -->
+    <svg style="display: none;">
+        <symbol id="logo-icon" viewBox="0 0 48 40">
+            <path d="M6 14h30v8a14 14 0 0 1-14 14h-2A14 14 0 0 1 6 22z" fill="none" stroke="currentColor" stroke-width="3"/>
+            <path d="M36 17h3a5 5 0 0 1 0 10h-4" fill="none" stroke="currentColor" stroke-width="3"/>
+            <path d="M13 3c-2 3 2 4 0 7M21 3c-2 3 2 4 0 7M29 3c-2 3 2 4 0 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </symbol>
+    </svg>
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+        <a href="#inicio" class="logo" aria-label="SmartCoffee">
+            <svg class="logo-icone" aria-hidden="true"><use href="#logo-icon"/></svg>
+            <span class="logo-texto">Smart<span>Coffee</span></span>
+        </a>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#ambiente">Ambiente</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#produtos" class="btn btn-cardapio">Cardápio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO / INÍCIO -->
+        <section id="inicio" class="secao secao-clara duas-colunas">
+            <div class="texto">
+                <p class="rotulo">Sabores que conectam</p>
+                <h1>Café que<br>conecta pessoas</h1>
+                <p class="subtitulo">Mais que um simples café</p>
+                <a href="#produtos" class="btn btn-principal">Ver cardápio <span class="seta">&rarr;</span></a>
+            </div>
+            <div class="caixa-imagem">
+                <img src="assets/conexões.jpg" alt="Xícara de café servida na SmartCoffee">
+            </div>
+        </section>
+
+        <!-- SOBRE NÓS -->
+        <section id="sobre" class="secao secao-branca duas-colunas">
+            <div class="caixa-imagem">
+                <img src="assets/Interna.jpg" alt="Interior da cafeteria SmartCoffee">
+            </div>
+            <div class="texto">
+                <p class="rotulo">Quem somos</p>
+                <h2>Sobre nós</h2>
+                <p>A SmartCoffee combina café de qualidade, tecnologia e um ambiente acolhedor.</p>
+                <a href="#ambiente" class="btn btn-contorno">Saiba mais</a>
+            </div>
+        </section>
+
+        <!-- PRODUTOS -->
+        <section id="produtos" class="secao secao-clara">
+            <header class="titulo-secao">
+                <p class="rotulo">Nossos produtos</p>
+                <h2>Nossos cafés</h2>
+            </header>
+
+            <div class="lista-cafes">
+                <article class="card-cafe">
+                    <div class="card-img-wrapper">
+                        <img src="assets/Cappucino.png" alt="Cappuccino Tradicional" loading="lazy" decoding="async">
+                    </div>
+                    <h3>Cappuccino Tradicional</h3>
+                    <p>Equilíbrio entre sabor e cremosidade.</p>
+                    <strong class="preco">R$ 14,90</strong>
+                </article>
+
+                <article class="card-cafe">
+                    <div class="card-img-wrapper">
+                        <img src="assets/Latte.png" alt="Latte Caramelo" loading="lazy" decoding="async">
+                    </div>
+                    <h3>Latte Caramelo</h3>
+                    <p>Leve, doce e irresistível.</p>
+                    <strong class="preco">R$ 16,90</strong>
+                </article>
+
+                <article class="card-cafe">
+                    <div class="card-img-wrapper">
+                        <img src="assets/Espresso.png" alt="Espresso Especial" loading="lazy" decoding="async">
+                    </div>
+                    <h3>Espresso Especial</h3>
+                    <p>Intenso como boas conversas.</p>
+                    <strong class="preco">R$ 12,90</strong>
+                </article>
+            </div>
+        </section>
+
+        <!-- NOSSO AMBIENTE -->
+        <section id="ambiente" class="secao secao-escura duas-colunas">
+            <div class="texto">
+                <p class="rotulo rotulo-ambiente">Nosso ambiente</p>
+                <h2>Um espaço para<br>boas ideias</h2>
+                <p>Ambiente moderno, acolhedor e pensado para trabalhar, estudar ou apenas relaxar.</p>
+                <a href="#contato" class="btn btn-principal btn-pequeno">Conheça</a>
+            </div>
+            <div class="caixa-imagem">
+                <img src="assets/Ambiente.jpg" alt="Ambiente da SmartCoffee" onerror="this.remove()" loading="lazy" decoding="async">
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section id="contato" class="secao secao-clara duas-colunas contato">
+            <div class="texto">
+                <p class="rotulo">Contato</p>
+                <h2>Fale conosco</h2>
+                <p>Tem dúvidas, sugestões ou quer fazer um evento?<br>Envie uma mensagem</p>
+            </div>
+
+            <form class="form-contato" action="#" method="post">
+                <input type="text" id="nome" name="nome" placeholder="Nome" required>
+                <input type="email" id="email" name="email" placeholder="E-mail" required>
+                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Mensagem" required></textarea>
+                <button type="submit" class="btn btn-principal btn-largo">Enviar mensagem</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <a href="#inicio" class="logo">
+            <svg class="logo-icone" aria-hidden="true"><use href="#logo-icon"/></svg>
+            <span class="logo-texto">Smart<span>Coffee</span></span>
+        </a>
+
+        <nav class="menu-rodape">
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#ambiente">Ambiente</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <div class="icones-rodape">
+            <span title="Café para viagem">🥐</span>
+            <span title="Xícara">☕</span>
+            <span title="Grão de café">🫘</span>
+        </div>
+    </footer>
+
+</body>
+</html>

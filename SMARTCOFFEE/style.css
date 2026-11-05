@@ -1,0 +1,649 @@
+
+/* ==========================================
+   SMARTCOFFEE - PREMIUM DESIGN
+   CSS compatível com o HTML enviado
+========================================== */
+
+/* 1. VARIÁVEIS */
+:root {
+    --cafe: #28150d;
+    --cafe-claro: #432719;
+    --laranja: #c96e32;
+    --dourado: #df985e;
+    --creme: #f8eee5;
+    --branco: #ffffff;
+    --texto: #291b14;
+    --cinza: #75675e;
+
+    --sombra: 0 5px 15px rgba(0, 0, 0, 0.12);
+    --transicao: 0.3s ease;
+}
+
+/* 2. RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--branco);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 3. CABEÇALHO */
+.cabecalho {
+    background: var(--cafe);
+    min-height: 85px;
+    padding: 15px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* 4. LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icone {
+    width: 48px;
+    height: 45px;
+    color: var(--laranja);
+    transition: var(--transicao);
+}
+
+.logo:hover .logo-icone {
+    transform: translateY(-4px);
+    color: var(--dourado);
+}
+
+.logo-texto {
+    color: white;
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.logo-texto span {
+    color: var(--laranja);
+}
+
+/* 5. MENU PRINCIPAL */
+.menu ul {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    list-style: none;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu a {
+    color: #eee2d8;
+    font-size: 13px;
+    font-weight: 400;
+
+    position: relative;
+    transition: var(--transicao);
+}
+
+/* HOVER DOS LINKS */
+.menu a:not(.btn)::after {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--laranja);
+    transition: width var(--transicao);
+}
+
+.menu a:hover {
+    color: var(--dourado);
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* BOTÃO CARDÁPIO */
+.menu .btn-cardapio {
+    background: var(--laranja);
+    color: white;
+
+    padding: 9px 17px;
+    border-radius: 25px;
+
+    transition: var(--transicao);
+}
+
+.menu .btn-cardapio:hover {
+    background: var(--dourado);
+    color: var(--cafe);
+    transform: translateY(-2px);
+}
+
+/* 6. SEÇÕES */
+.secao {
+    padding: 65px 8%;
+}
+
+.secao-clara {
+    background: var(--creme);
+}
+
+.secao-branca {
+    background: var(--branco);
+}
+
+.secao-escura {
+    background: var(--cafe);
+    color: white;
+}
+
+/* 7. DUAS COLUNAS */
+.duas-colunas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+/* 8. TEXTOS */
+.texto h1,
+.texto h2 {
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.texto h1 {
+    font-size: clamp(30px, 4vw, 43px);
+    margin: 12px 0;
+}
+
+.texto h2 {
+    font-size: 29px;
+    margin: 10px 0 18px;
+}
+
+.texto p {
+    font-size: 14px;
+    color: var(--cinza);
+    margin-bottom: 18px;
+}
+
+.texto .rotulo {
+    color: var(--laranja);
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 8px;
+}
+
+.secao-escura .texto p {
+    color: #e0d0c4;
+}
+
+/* 9. BOTÕES */
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+
+    padding: 11px 24px;
+
+    background: var(--laranja);
+    color: white;
+
+    border: 1px solid var(--laranja);
+    border-radius: 25px;
+
+    font-family: inherit;
+    font-size: 13px;
+    cursor: pointer;
+
+    transition: var(--transicao);
+}
+
+.btn:hover {
+    background: var(--cafe-claro);
+    border-color: var(--cafe-claro);
+    transform: translateY(-3px);
+    box-shadow: var(--sombra);
+}
+
+.btn-contorno {
+    background: transparent;
+    color: var(--laranja);
+}
+
+.btn-contorno:hover {
+    background: var(--laranja);
+    color: white;
+    border-color: var(--laranja);
+}
+
+.btn-pequeno {
+    padding: 9px 22px;
+}
+
+.btn-largo {
+    width: 100%;
+}
+
+.seta {
+    transition: transform var(--transicao);
+}
+
+.btn:hover .seta {
+    transform: translateX(5px);
+}
+
+/* 10. CAIXAS DE IMAGEM */
+.caixa-imagem {
+    width: 100%;
+    height: clamp(220px, 28vw, 360px);
+
+    background: #fff;
+    border: 1px solid #ded4ca;
+    border-radius: 12px;
+
+    overflow: hidden;
+    box-shadow: var(--sombra);
+
+    transition: var(--transicao);
+}
+
+.caixa-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.6s ease;
+}
+
+.caixa-imagem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.16);
+}
+
+.caixa-imagem:hover img {
+    transform: scale(1.06);
+}
+
+/* 11. TÍTULO DOS PRODUTOS */
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.titulo-secao .rotulo {
+    color: var(--laranja);
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.titulo-secao h2 {
+    font-size: 29px;
+    font-weight: 600;
+}
+
+/* 12. LISTA DE CAFÉS */
+.lista-cafes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+/* 13. CARDS */
+.card-cafe {
+    text-align: center;
+    transition: var(--transicao);
+}
+
+.card-cafe:hover {
+    transform: translateY(-7px);
+}
+
+/* IMAGENS DOS CARDS */
+.card-img-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: var(--sombra);
+    background: #e8d8ca;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.5s ease;
+}
+
+.card-cafe:hover .card-img-wrapper img {
+    transform: scale(1.08);
+}
+
+/* INFORMAÇÕES DOS CAFÉS */
+.card-cafe h3 {
+    font-size: 16px;
+    margin: 12px 0 5px;
+    color: var(--texto);
+}
+
+.card-cafe p {
+    font-size: 12px;
+    color: var(--cinza);
+    margin-bottom: 7px;
+}
+
+.preco {
+    display: block;
+    color: var(--cafe);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* 14. AMBIENTE */
+#ambiente {
+    background: var(--cafe);
+}
+
+#ambiente .texto h2 {
+    color: white;
+}
+
+#ambiente .rotulo {
+    color: var(--dourado);
+}
+
+#ambiente .caixa-imagem {
+    border: none;
+}
+
+#sobre .texto {
+    text-align: center;
+}
+
+#sobre .texto > p:not(.rotulo) {
+    max-width: 320px;
+    margin: 0 auto 18px;
+}
+
+#sobre .btn-contorno {
+    min-width: 100px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.18);
+}
+
+/* 15. CONTATO */
+.contato {
+    align-items: center;
+}
+
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.form-contato input,
+.form-contato textarea {
+    width: 100%;
+    padding: 13px 15px;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    color: var(--texto);
+    background: white;
+
+    border: 1px solid #dfcfc2;
+    border-radius: 10px;
+
+    outline: none;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.08);
+
+    transition: var(--transicao);
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus {
+    border-color: var(--laranja);
+    box-shadow: 0 0 0 3px rgba(201, 110, 50, 0.12);
+}
+
+.form-contato textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.form-contato button {
+    font-family: inherit;
+}
+
+/* 16. RODAPÉ */
+.rodape {
+    background: var(--cafe);
+    color: white;
+
+    padding: 28px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+/* MENU DO RODAPÉ */
+.menu-rodape ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.menu-rodape a {
+    color: #e8ddd5;
+    font-size: 12px;
+    transition: var(--transicao);
+}
+
+.menu-rodape a:hover {
+    color: var(--dourado);
+}
+
+/* ÍCONES DO RODAPÉ */
+.icones-rodape {
+    display: flex;
+    gap: 13px;
+    align-items: center;
+}
+
+.icones-rodape span {
+    color: var(--laranja);
+    font-size: 21px;
+    cursor: pointer;
+    transition: var(--transicao);
+}
+
+.icones-rodape span:hover {
+    color: var(--dourado);
+    transform: translateY(-4px);
+}
+
+/* 17. ANIMAÇÕES */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#inicio .texto {
+    animation: aparecer 0.8s ease both;
+}
+
+#inicio .caixa-imagem {
+    animation: aparecer 1s ease both;
+}
+
+/* 18. TABLETS */
+@media (max-width: 900px) {
+    .cabecalho,
+    .rodape {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .menu ul {
+        gap: 17px;
+    }
+
+    .secao {
+        padding: 55px 5%;
+    }
+
+    .duas-colunas {
+        gap: 30px;
+    }
+
+}
+
+/* 19. CELULARES */
+@media (max-width: 650px) {
+    .cabecalho {
+        flex-direction: column;
+        gap: 17px;
+        padding: 18px 5%;
+    }
+
+    .menu {
+        width: 100%;
+    }
+
+    .menu ul {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px 20px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .duas-colunas {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    #sobre .caixa-imagem {
+        display: none;
+    }
+
+    .secao {
+        padding: 45px 6%;
+    }
+
+    .texto h1 {
+        font-size: 34px;
+    }
+
+    .texto h2 {
+        font-size: 26px;
+    }
+
+    .lista-cafes {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 15px;
+    }
+
+    .contato {
+        grid-template-columns: 1fr;
+    }
+
+    .rodape {
+        flex-direction: column;
+        padding: 30px 5%;
+        gap: 22px;
+    }
+
+    .menu-rodape ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+/* 20. CELULARES PEQUENOS */
+@media (max-width: 400px) {
+    .lista-cafes {
+        grid-template-columns: 1fr;
+    }
+
+    .card-img-wrapper {
+        height: 190px;
+    }
+
+    .menu ul {
+        gap: 12px 15px;
+    }
+}
+
+/* 21. ACESSIBILIDADE */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
